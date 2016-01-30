@@ -1,3 +1,3 @@
 # prjAlbumPhoto
 
-Gestion Edition d'un album photo numÃ©rique pour Sauvegarde, Impression tout support.
+Gestion Edition d'un album photo numérique pour Sauvegarde et Impression sur tout support.

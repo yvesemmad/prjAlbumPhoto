@@ -1,7 +1,7 @@
 <!-- Example row of columns -->
 
 <div ng-init="">
-    <div class="row" ng-show="choix() == undefined">
+    <div class="row" ng-show="choix() === undefined">
         <div class="col-md-10">
           <div class="row">
             <div class="col-md-12">
@@ -196,31 +196,26 @@
         </div>
     </div>
     
-    <br><br>
-    <br><br>
-    <br><br>
-    <div ng-hide="choix() == undefined">
-    <div flow-name="obj.flow"
-        flow-init="{target: 'targetedUpload'}"
+    <br>
+    <div flow-init="{target: '/targetedUpload'}"
         flow-drop
         flow-files-submitted="$flow.upload()"
-        flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]"
-        class="droparea">
+        flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
     <div class="row">
-        <div class="col-md-12 bottom">
-            <div class="drop center-block" ng-class="dropClass">
+        <div class="col-md-3 bottom">
+            <div class="drop" ng-class="dropClass">
                 <span class="btn btn-default" flow-btn>Upload Image</span>
                 <span class="btn btn-default" flow-btn flow-directory ng-show="$flow.supportDirectory">Upload Folder</span>
                 <b>OR</b>
-                <span>Drag And Drop your images here</span>
+                Drag And Drop your images here
             </div>
         </div>
-        <div class="col-md-12">
-            <div> <!--  class="Collage effect-parent" -->
+        <div class="col-md-10">
+            <div>
                 <div ng-repeat="file in $flow.files" class="gallery-box col-md-3">
                   <span class="title">{{file.name}}</span>
-                  <div class="thumbnail" ng-show="$flow.files.length"> <!--  Image_Wrapper -->
-                    <img class="img-thumbnail" flow-img="file" />
+                  <div class="thumbnail" ng-show="$flow.files.length">
+                    <img flow-img="file" />
                   </div>
                   <div class="progress progress-striped" ng-class="{active: file.isUploading()}">
                     <div class="progress-bar" role="progressbar"
@@ -242,25 +237,6 @@
         </div>
     </div>
     
-    </div>
-        <br>
-    <div class="row">
-        <div class="col-md-12 right btn-group-* col-md-offset-9">
-            Fichiers : #{{obj.flow.files.length}}
-            <img src="{{f.file}}" ng-repeat="f in obj.flow.files"/>
-            
-            <button class="btn btn-info" ng-click="checkFlow()">annuler</button>
-            <button class="btn btn-info" ng-class="{active: file.isUploading()}">creer</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 right btn-group-* col-md-offset-10">
-            I have uploaded files: #{{obj.flow.files.length}}
-            <img src="{{f.file}}" ng-repeat="f in obj.flow.files"/>
-            
-            
-        </div>
-    </div>
     </div>
 </div>
 

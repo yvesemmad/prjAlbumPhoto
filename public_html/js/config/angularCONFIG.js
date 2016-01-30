@@ -16,6 +16,16 @@ myApp .config(['$routeProvider',
                     templateUrl: 'view/pelemele/index.html',
                     controller: 'PelemeleController'
             }).
+                when ('/Pelemele/:choose',{
+                    templateUrl: 'view/pelemele/index.html?:choose',
+                    controller: 'PelemeleController',
+                    urldata :""
+            }).
+                when ('/Pelemele/:choose/:create',{
+                    templateUrl: 'view/pelemele/index.html?:choose&:create',
+                    controller: 'PelemeleController',
+                    urldata :""
+            }).
                 otherwise({redirectTo: '/Home'});
     }]);
 
