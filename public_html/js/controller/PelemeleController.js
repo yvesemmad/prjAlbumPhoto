@@ -40,6 +40,11 @@ function PelemeleController($scope,$location,$route,$routeParams){
         }
         
     };
+    
+    $scope.makeCollage = function (){
+        alert('make');
+        $('#bloc').addClass('Collage');
+    }
     //alert('urlParams:'+JSON.stringify($scope.choix()));
     
 }

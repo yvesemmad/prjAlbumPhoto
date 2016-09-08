@@ -216,7 +216,7 @@
             </div>
         </div>
         <div class="col-md-12">
-            <div> <!--  class="Collage effect-parent" -->
+            <div > <!--  class="Collage effect-parent" -->
                 <div ng-repeat="file in $flow.files" class="gallery-box col-md-3">
                   <span class="title">{{file.name}}</span>
                   <div class="thumbnail" ng-show="$flow.files.length"> <!--  Image_Wrapper -->
@@ -246,11 +246,11 @@
         <br>
     <div class="row">
         <div class="col-md-12 right btn-group-* col-md-offset-9">
-            Fichiers : #{{obj.flow.files.length}}
-            <img src="{{f.file}}" ng-repeat="f in obj.flow.files"/>
+            <!-- Fichiers : #{{obj.flow.files.length}}
+            <img src="{{f.file}}" ng-repeat="f in obj.flow.files"/> -->
             
             <button class="btn btn-info" ng-click="checkFlow()">annuler</button>
-            <button class="btn btn-info" ng-class="{active: file.isUploading()}">creer</button>
+            <button class="btn btn-info" ng-class="{active: file.isUploading()}" ng-click="makeCollage()">creer</button>
         </div>
     </div>
     <div class="row">
